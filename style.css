@@ -1,0 +1,94 @@
+@font-face {
+    font-family:digital; 
+    src: url('./mainFont.ttf');
+}
+
+*{
+  box-sizing:border-box;
+}
+*::selection{
+    background:#ff5100;
+}
+
+div.interface{ 
+    margin:20px auto; 
+    max-width:500px; 
+    height:auto; 
+    background:rgb(219, 219, 219); 
+    box-shadow:0 0 20px rgb(168, 168, 168);
+    border-top-right-radius: 23px;
+    border-top-left-radius: 23px;
+} 
+
+div.calculator-btns{
+  padding:20px;
+    display:grid; 
+    grid-template-columns: repeat(4,1fr); 
+    gap:15px;
+}
+
+div.onOff{
+        width:1rem; 
+        height: 1rem; 
+        border-radius:50%;
+        background:#00ff00; 
+        padding-bottom: 10px; 
+        position: relative; 
+        left:2rem;
+        top:5px; 
+        box-shadow:0 0 3px grey;
+        cursor: pointer; 
+        text-align:center;
+        font-family:sans-serif; 
+        font-size:10px;
+}
+
+input{
+     text-align:right;
+     font-family:sans-serif;
+     font-family:digital; 
+     font-weight: bold;
+      width: 90%; 
+      height: 5.7rem;
+      margin:10px 25px; 
+     font-size:4rem; 
+     border-radius:7px;
+     border:none;
+     outline:none;
+     box-shadow:1px 2px 1px rgb(167, 167, 167);
+    padding-right:14px;
+}
+
+button{
+  padding:20px; 
+  font-size:2rem; 
+  border-radius:10px; 
+  border:none; 
+  outline:none; 
+  cursor:pointer; 
+  transition:transform .3s; 
+  box-shadow:1px 2px 1px rgb(167, 167, 167);
+  color:rgb(34, 33, 32); 
+  
+} 
+button:focus{
+    transform:scale(1.1);
+    transition:transform .3s;
+}
+
+button.is-equal{
+    grid-column: 5/4; 
+    grid-row:4/6;  
+    background-color:#ff5100;
+} 
+
+button.is-zero{
+    grid-column:2/4; 
+     
+
+} 
+
+
+button.operator{
+       color:#ff5100;
+} 
